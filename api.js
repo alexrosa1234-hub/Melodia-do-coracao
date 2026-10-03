@@ -1,15 +1,17 @@
-// Melodia do Coração - integração de API
-// Este arquivo será usado para conectar o site aos serviços de geração.
+/ Melodia do Coração — integração de API
+// Camada preparada para conectar os serviços reais de música e mini filme.
 
 const MELODIA_API = {
+
   async gerarMusica(dados) {
     console.log("Solicitação de música recebida:", dados);
 
-    // A integração real com o servidor será adicionada
-    // sem expor chaves secretas no navegador.
+    // A geração real será conectada ao backend.
+    // Nunca colocar chaves secretas diretamente neste arquivo.
     return {
-      sucesso: true,
-      status: "preparando"
+      success: true,
+      status: "preparando",
+      message: "Solicitação de música recebida."
     };
   },
 
@@ -17,10 +19,12 @@ const MELODIA_API = {
     console.log("Solicitação de mini filme recebida:", dados);
 
     return {
-      sucesso: true,
-      status: "preparando"
+      success: true,
+      status: "preparando",
+      message: "Solicitação de mini filme recebida."
     };
   }
+
 };
 
 window.MELODIA_API = MELODIA_API;
